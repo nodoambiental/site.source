@@ -1,0 +1,16 @@
+mixin head
+    head
+        meta(charset = "utf-8")
+        meta(name = "viewport", content = "width = device-width")
+        meta(name = "description", content = TTelif("page.description", T("page.description"), T("config.description")))
+        meta(name = "og:title", content = `${TTif("page.title", `${T("page.title")} :: `)}${T("config.title")}`)
+        meta(name = "og:description", content = TTelif("page.description", T("page.description"), T("config.description")))
+        meta(name = "og:type", content = "website")
+        +Tif("current_url")
+            meta(name = "og:url", content = T("current_url"))
+            link(rel = "canonical", href = T("current_url"))
+        link(rel = "icon", href = T("config.extra.choccy_icon"))
+        meta(name = "theme-color", content = "#1F1E1E")
+        title 
+            = `${TTif("page.title", `${T("page.title")} :: `)}${T("config.title")}`
+            

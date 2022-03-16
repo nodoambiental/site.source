@@ -1,0 +1,9 @@
+include ../util/tera.pug
+!= Textend('index.html')
++Tblock("content") 
+    ul(class="date-list")
+        +Tfor("section.pages", "page")
+            li
+                a(href=T("page.permalink"))
+                    = T("page.title")
+                != T_unsafe(`page.date | date(format="%B %d, %Y")`)

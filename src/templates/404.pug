@@ -1,0 +1,7 @@
+include ../util/tera.pug
+!= Textend('index.html')
++Tblock("content") 
+    div(class="error")
+        include ../static/404.svg
+        strong 404
+        p page not found

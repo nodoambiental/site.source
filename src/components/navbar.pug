@@ -1,0 +1,24 @@
+include base
+
+mixin navbar
+    nav(class=CSS("nav"))
+        div(class="flex-none")
+            a(class=CSS("navButton") id="potato") POTATO
+        div(class="flex-1")
+            +Tfor("config.extra.choccy_nav", "link")
+                a(class=CSS("navButton"), href = T("link.path"))
+                    = T("link.name")
+        div(class="flex-none gap-2")
+            +search 
+            +themeChanger
+            +avatarDropdown("./potato.png")
+                li
+                    a(class="justify-between") Potat 
+                        span(class="badge badge-success") Tasty!
+                li
+                    a(class="justify-between") Candy 
+                        span(class="badge badge-info") Sour!
+                li
+                    a(class="justify-between") Candy
+                        span(class="badge badge-error") Sad :(
+        

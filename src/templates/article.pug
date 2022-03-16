@@ -1,0 +1,15 @@
+include ../util/tera.pug
+!= Textend('index.html')
++Tblock("content")
+    article 
+        h1
+            a(href=T("current_url"))
+                = T("page.title")
+        small 
+            time(datetime=T("page.date"))
+                != T("page.date | date(format=\"%B %d, %Y\")")
+            = `by`
+            a(href=T("config.base_url"))
+                = T("config.extra.choccy_author")
+        = T("page.content")
+

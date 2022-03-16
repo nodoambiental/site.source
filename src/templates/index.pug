@@ -1,0 +1,23 @@
+// Utilities
+include ../util/tera
+include ../util/classes
+
+// Components
+include ../components/navbar
+include ../components/head
+include ../components/base
+
+// Definitions
+!= Tdef(`set bundle = get_url(path="bundle.js")`)
+
+// Page
+doctype html 
+html(id="choccy", lang="en", data-theme="dark")
+    +head
+    body 
+        header
+            +navbar
+        main
+            +hr
+            +Tblock("content")
+    script(src = T_unsafe("bundle"))

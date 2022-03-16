@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "allowJs": true,
+        "jsx": "react",
+        "jsxFactory": "h",
+        "jsxFragmentFactory": "Fragment",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "experimentalDecorators": true
+    },
+    "files": ["src/bundle.ts"]
+}

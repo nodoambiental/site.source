@@ -1,0 +1,15 @@
+name = "choccytheme"
+description = "A choccytheme, for a choccyblog in a choccymilk. Choccytastic."
+license = "ISC"
+homepage = "https://github.com/aordano/choccytheme"
+min_version = "0.1.0"
+demo = "https://blog.choccymilk.dev"
+
+[extra]
+  choccy_nav = []
+  choccy_icon = ""
+  choccy_author = ""
+
+[author]
+  name = "Ágata Ordano"
+  homepage = "https://choccymilk.dev"

@@ -1,0 +1,60 @@
+mixin themeChanger 
+    div(class="dropdown dropdown-left") 
+        div(tabindex="0", class="group btn gap-2 normal-case btn-ghost")
+            div(class="container h-4 w-4 flex-no-shrink fill-current")
+                include ../../static/icons/solid/color-swatch.svg
+            div(class="w-0 group-hover:w-auto hidden group-hover:md:inline") Themes
+        div(class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl mt-16") 
+            ul(tabindex="0", class="menu menu-compact p-4") 
+                li 
+                    button(data-set-theme="light", data-act-class="active", class="") 🌝 light 
+                li
+                    button(button data-set-theme="dark", data-act-class="active", class="active") 🌚 dark
+                li
+                    button(button data-set-theme="cupcake", data-act-class="active", class="") 🧁 cupcake
+                li
+                    button(button data-set-theme="bumblebee", data-act-class="active", class="") 🐝 bumblebee
+                li
+                    button(data-set-theme="emerald", data-act-class="active", class="") ✳️ Emerald
+                li    
+                    button(button data-set-theme="corporate", data-act-class="active", class="") 🏢 Corporate
+                li
+                    button(button data-set-theme="synthwave", data-act-class="active") 🌃 synthwave
+                li
+                    button(button data-set-theme="retro", data-act-class="active") 👴 retro
+                li
+                    button(button data-set-theme="cyberpunk", data-act-class="active") 🤖 cyberpunk
+                li
+                    button(button data-set-theme="valentine", data-act-class="active") 🌸 valentine
+                li
+                    button(button data-set-theme="halloween", data-act-class="active") 🎃 halloween
+                li
+                    button(button data-set-theme="garden", data-act-class="active") 🌷 garden
+                li
+                    button(button data-set-theme="forest", data-act-class="active", class="") 🌲 forest
+                li
+                    button(button data-set-theme="aqua", data-act-class="active", class="") 🐟 aqua
+                li
+                    button(button data-set-theme="lofi", data-act-class="active", class="") 👓 lofi
+                li
+                    button(button data-set-theme="pastel", data-act-class="active", class="") 🖍 pastel
+                li
+                    button(data-set-theme="fantasy", data-act-class="active") 🧚‍♀️ fantasy
+                li    
+                    button(button data-set-theme="wireframe", data-act-class="active") 📝 Wireframe
+                li
+                    button(button data-set-theme="black", data-act-class="active", class="") 🏴 black
+                li
+                    button(button data-set-theme="luxury", data-act-class="active") 💎 luxury
+                li
+                    button(data-set-theme="dracula", data-act-class="active") 🧛‍♂️ dracula
+                li
+                    button(button data-set-theme="cmyk", data-act-class="active", class="") 🖨 CMYK
+                li
+                    button(button data-set-theme="autumn", data-act-class="active", class="") 🍁 Autumn
+                li
+                    button(button data-set-theme="business", data-act-class="active", class="") 💼 Business
+                li
+                    button(button data-set-theme="acid", data-act-class="active", class="") 💊 Acid
+                li
+                    button(button data-set-theme="lemonade", data-act-class="active", class="") 🍋 Lemonade

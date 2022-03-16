@@ -1,0 +1,31 @@
+mixin Tif(condition)
+    = `{% if ${condition} %}`
+    block
+    = `{% endif %}`
+
+mixin Tif_(condition)
+    = `{% if ${condition} %}`
+    block
+    = `{% else %}`
+
+mixin Tif_end(condition)
+    block
+    = `{% endif %}`
+
+mixin Tfor(iterator, iteratorName)
+    = `{% for ${iteratorName} in ${iterator} %}`
+    block
+    = `{% endfor %}`
+
+mixin Tblock(blockName)
+    = `{% block ${blockName} %}`
+    block
+    = `{% endblock ${blockName} %}`
+
+-
+    const T = (content) => `{{ ${content} | safe }}`;
+    const T_unsafe = (content) => `{{ ${content} }}`;
+    const TTif = (condition, content) => `{% if ${condition} %}${content}{% endif %}`;
+    const TTelif = (condition, ifcontent, elsecontent) => `{% if ${condition} %}${ifcontent}{% else %}${elsecontent}{% endif %}`;
+    const Tdef = (definition) => `{% ${definition} %}`;
+    const Textend = (file) => `{% extends "${file}" %}`;

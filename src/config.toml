@@ -1,0 +1,25 @@
+base_url = "./"
+title = "Choccy Theme"
+description = "A choccytheme, for a choccyblog in a choccymilk. Choccywoah."
+
+default_language = "en"
+generate_feed = true
+minify_html = true
+output_dir = "../dist/"
+
+[markdown]
+  highlight_code = true
+  highlight_theme = "visual-studio-dark"
+  external_links_target_blank = true
+  external_links_no_follow = true
+  external_links_no_referrer = true
+  smart_punctuation = true
+
+[extra]
+  choccy_nav = [
+    { name = "HOME", path = "/" },
+    { name = "POSTS", path = "/posts/" },
+    { name = "CONFIG", path = "/config/" },
+  ]
+  choccy_icon = "/icon.png"
+  choccy_author = "Ágata Ordano"

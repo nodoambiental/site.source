@@ -1,0 +1,14 @@
+include ../util/tera.pug
+a(class="zola-anchor", href=`#${T(id)}`, aria-label=`Anchor link for: ${T(id)}`)
+  +Tif("level == 1")
+     = `#`
+  +Tif("level == 2")
+     = `##`
+  +Tif("level == 3")
+     = `###`
+  +Tif("level == 4")
+     = `####`
+  +Tif("level == 5")
+     = `#####`
+  +Tif("level == 6")
+     = `######`
