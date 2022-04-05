@@ -1,10 +1,4 @@
-import meiosis from "meiosis-setup/functionPatches";
-import simpleStream from "meiosis-setup/simple-stream";
-import produce from "immer";
-import { LitElement, render, html } from "lit";
-import { customElement } from "lit/decorators.js";
-import * as Store from "./store";
-import { map } from "rxjs/operators";
+import * as Init from "./init";
 
 // Requires configuring the root HTML tag with id "site"
 const isSite = (): boolean => {
@@ -15,8 +9,8 @@ const isSite = (): boolean => {
 };
 
 export const setup = () => {
-    Store.init();
-    return Store.state;
+    Init.init();
+    return Init.state;
 };
 
 // export const setup = (): void => {
