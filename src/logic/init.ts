@@ -1,4 +1,4 @@
-import * as Mag from "./magnetic-framework";
+import * as Mag from "./magnetic";
 import i18n_en from "../i18n/en.json";
 import i18n_es from "../i18n/es.json";
 
@@ -17,7 +17,7 @@ export const state = {
             isMobile: new Mag.State(false),
         },
         queries: {
-            load: new Mag.ActiveEvent<boolean>("load", (event) => true),
+            load: new Mag.Events.ActiveEvent<boolean>("load", (event) => true),
             // selectLang: new MagCustomEvent<string, typeof window>(
             //     "language",
             //     window,
@@ -25,7 +25,7 @@ export const state = {
             //         return data.detail;
             //     }
             // ),
-            mobile: new Mag.WidthQuery(768),
+            mobile: new Mag.Events.WidthQuery(768),
         },
     },
     data: {},
