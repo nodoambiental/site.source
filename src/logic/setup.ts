@@ -6,11 +6,11 @@ import { customElement } from "lit/decorators.js";
 import * as Store from "./store";
 import { map } from "rxjs/operators";
 
-// Requires configuring the root HTML tag with id "choccy"
-const isChoccy = (): boolean => {
-    const choccyElement = document.getElementById("choccy");
-    if (choccyElement) {
-        return choccyElement.tagName === "html" ? true : false;
+// Requires configuring the root HTML tag with id "site"
+const isSite = (): boolean => {
+    const siteElement = document.getElementById("site");
+    if (siteElement) {
+        return siteElement.tagName === "html" ? true : false;
     }
 };
 
@@ -20,10 +20,10 @@ export const setup = () => {
 };
 
 // export const setup = (): void => {
-//     if (isChoccy()) {
-//         const choccyChildren = document.getElementById("choccy").childNodes;
+//     if (isSite()) {
+//         const siteChildren = document.getElementById("site").childNodes;
 //         render(
-//             <Choccy>${choccyChildren}</Choccy>,
+//             <Site>${siteChildren}</Site>,
 //             document.getElementById("root")
 //         );
 //     }
