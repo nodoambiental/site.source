@@ -9,7 +9,7 @@ mixin head
         +Tif("current_url")
             meta(name = "og:url", content = T("current_url"))
             link(rel = "canonical", href = T("current_url"))
-        link(rel = "icon", href = T("config.extra.choccy_icon"))
+        link(rel = "icon", href = T("config.extra.site_icon"))
         meta(name = "theme-color", content = "#1F1E1E")
         title 
             = `${TTif("page.title", `${T("page.title")} :: `)}${T("config.title")}`
