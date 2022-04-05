@@ -5,12 +5,24 @@ mixin navbar
         div(class="flex-none")
             a(class=CSS("navButton") id="potato") POTATO
         div(class="flex-1")
-            +Tfor("config.extra.choccy_nav", "link")
-                a(class=CSS("navButton"), href = T("link.path"))
-                    = T("link.name")
+            +Tfor("config.extra.site_nav", "element")
+                +Tif("element.type == 'link'")
+                    a(class=CSS("navButton"), href = T("element.path"))
+                        != T_unsafe("element.i18n_key")
+                +Tif("element.type == 'dropdown'")
+                    // TODO Add dropdown ::after in the class
+                    // TODO Implement class navDropdown
+                    a(class=CSS("navButton"), href = T("element.path"))
+                        != T_unsafe("element.i18n_key")
+                +Tif("element.type == 'link_external'")
+                    // TODO Add external icon ::after in the class
+                    // TODO Implement class navButtonExternal
+                    a(class=CSS("navButton"), href = T("element.path"))
+                        != T_unsafe("element.i18n_key")
         div(class="flex-none gap-2")
-            +search 
+            +langSelector
             +themeChanger
+            +search 
             +avatarDropdown("./potato.png")
                 li
                     a(class="justify-between") Potat 
