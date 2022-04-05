@@ -1,25 +1,65 @@
 base_url = "./"
-title = "Choccy Theme"
-description = "A choccytheme, for a choccyblog in a choccymilk. Choccywoah."
+title = "Fundación Nodo Ambiental"
+description = "FNA Site"
 
-default_language = "en"
+default_language = "es"
 generate_feed = true
 minify_html = true
 output_dir = "../dist/"
 
 [markdown]
-  highlight_code = true
-  highlight_theme = "visual-studio-dark"
-  external_links_target_blank = true
-  external_links_no_follow = true
-  external_links_no_referrer = true
-  smart_punctuation = true
+highlight_code = true
+highlight_theme = "visual-studio-dark"
+external_links_target_blank = true
+external_links_no_follow = true
+external_links_no_referrer = true
+smart_punctuation = true
 
 [extra]
-  choccy_nav = [
-    { name = "HOME", path = "/" },
-    { name = "POSTS", path = "/posts/" },
-    { name = "CONFIG", path = "/config/" },
-  ]
-  choccy_icon = "/icon.png"
-  choccy_author = "Ágata Ordano"
+site_nav = [
+  { i18n_key = "nav_services", path = "TODO", type = "link" },
+  { i18n_key = "nav_projects", path = "TODO", dropdown = [
+    { i18n_key = "nav_projects_batteries", path = "TODO" },
+    { i18n_key = "nav_projects_orchards", path = "TODO" },
+    { i18n_key = "nav_projects_others", path = "TODO" },
+  ], type = "dropdown" },
+  { i18n_key = "nav_about", path = "TODO", dropdown = [
+    { i18n_key = "nav_about_ngo", path = "TODO", type = "link" },
+    { i18n_key = "nav_about_team", path = "TODO", type = "link" },
+    { i18n_key = "nav_about_values", path = "TODO", type = "link" },
+    { i18n_key = "nav_about_goals", path = "TODO", type = "link" },
+  ], type = "dropdown" },
+  { i18n_key = "nav_made-here", path = "TODO", dropdown = [
+    { i18n_key = "nav_made-here_products", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_research", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_documentation", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_fos", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_wiki", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_projects", path = "TODO", type = "link" },
+    { i18n_key = "nav_made-here_working-here", path = "TODO", type = "link" },
+  ], type = "dropdown" },
+  { i18n_key = "nav_more", path = "TODO", dropdown = [
+    { i18n_key = "nav_more_contact", path = "TODO", type = "link_external" },
+    { i18n_key = "nav_more_enquiries", path = "TODO", type = "link_external" },
+    { i18n_key = "nav_more_blog", path = "TODO", type = "link" },
+    { i18n_key = "nav_more_tech-blog", path = "TODO", type = "link" },
+    { i18n_key = "nav_more_github", path = "TODO", type = "link_external" },
+    { i18n_key = "nav_more_facebook", path = "TODO", type = "link_external" },
+    { i18n_key = "nav_more_linkedin", path = "TODO", type = "link_external" },
+    { i18n_key = "nav_more_instagram", path = "TODO", type = "link_external" },
+  ], type = "dropdown" },
+  { i18n_key = "nav_join", path = "TODO", type = "button" },
+  { i18n_key = "nav_donate", path = "TODO", type = "button" },
+]
+site_icon = "/icon.png"
+site_author = "Ágata Ordano"
+
+[languages.es]
+[languages.es.translations]
+title = "Fundación Nodo Ambiental"
+description = "Sitio web de la Fundación Nodo Ambiental"
+
+[languages.en]
+[languages.en.translations]
+title = "Fundación Nodo Ambiental"
+description = "Sitio web de la Fundación Nodo Ambiental"
