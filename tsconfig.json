@@ -10,7 +10,8 @@
         "jsxFragmentFactory": "Fragment",
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "resolveJsonModule": true
     },
     "files": ["src/bundle.ts"]
 }
