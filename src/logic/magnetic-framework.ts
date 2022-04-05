@@ -127,7 +127,7 @@ export class Node<StateData> {
         this._isComponent = isComponent ?? false;
         if (this._isComponent) {
             this._nodeElement = () =>
-                document.querySelector(`[data-rx-id="${id}"]`);
+                document.querySelector(`[data-mag-id="${id}"]`);
         } else {
             this._nodeElement = () => document.getElementById(id);
         }
@@ -251,11 +251,11 @@ export class ComponentTemplate<StateData> {
         ).forEach((element) => {
             const newId = short.generate();
             const doesExist = () => {
-                const node = document.querySelector(`[data-rx-id="${newId}"]`);
+                const node = document.querySelector(`[data-mag-id="${newId}"]`);
                 return !!node;
             };
             if (!doesExist()) {
-                element.dataset.rxId = newId;
+                element.dataset.magId = newId;
             }
             this.ids.push(newId);
             this._elements[newId] = new Node(
@@ -336,7 +336,7 @@ export class Component<LocalState, SharedState> {
         onLifecycle?: Observer<HTMLElement>["complete"]
     ) {
         // TODO Handle SharedState initialization
-        this._name = `rx-${name}`;
+        this._name = `mag-${name}`;
         this._components = new ComponentTemplate(
             this._name,
             initialState,
@@ -380,7 +380,7 @@ export class Component<LocalState, SharedState> {
     // TODO populate the regenerate method on the component definition
     // public regenerate(): void {
     //     this._components = new ComponentTemplate(
-    //         `rx-${this._name}`,
+    //         `mag-${this._name}`,
     //         onError,
     //         onLifecycle
     //     );
@@ -456,7 +456,7 @@ export class Component<LocalState, SharedState> {
 
         this._components.ids.forEach((elementId) => {
             fromEvent(
-                document.querySelector(`[data-rx-id="${elementId}"]`),
+                document.querySelector(`[data-mag-id="${elementId}"]`),
                 event
             ).subscribe({
                 next: (event) => {

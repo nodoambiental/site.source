@@ -47,7 +47,7 @@ export const init = (): void => {
         new CustomEvent("i18n_update", { detail: lang });
 
     state.components.langSelector.onEventLocal("click", (node) => {
-        const lang = node.getAttribute("data-rx-i18n-lang");
+        const lang = node.getAttribute("data-mag-i18n-lang");
         if (lang) {
             window.dispatchEvent(changeLangEvent(lang));
         }
