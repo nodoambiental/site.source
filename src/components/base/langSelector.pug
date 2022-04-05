@@ -1,0 +1,12 @@
+mixin langSelector 
+    div(class="dropdown dropdown-left") 
+        div(tabindex="0", class="group btn gap-2 normal-case btn-ghost")
+            div(class="container h-4 w-4 flex-no-shrink fill-current")
+                include ../../static/icons/solid/translate.svg
+            div(class="w-0 group-hover:w-auto hidden group-hover:md:inline") Languages
+        div(class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl mt-16") 
+            ul(tabindex="0", class="menu menu-compact p-4") 
+                li 
+                    button(data-rx-i18n-lang="en", class="rx-langSelector") English 
+                li
+                    button(data-rx-i18n-lang="es", class="rx-langSelector") Español
