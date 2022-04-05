@@ -3,7 +3,7 @@
     "out": "build/zola",
     "static": {
         "dir": "src/",
-        "sources": ["static/", "config.toml", "theme.toml"],
+        "sources": ["static/", "i18n/", "config.toml", "theme.toml"],
         "out": ""
     },
     "entry": {
