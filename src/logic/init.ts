@@ -1,4 +1,4 @@
-import * as Mag from "./magnetic";
+import * as Mag from "magnetic-js";
 import i18n_en from "../i18n/en.json";
 import i18n_es from "../i18n/es.json";
 
