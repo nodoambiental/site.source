@@ -1,17 +1,16 @@
 import * as Init from "./init";
 
-// Requires configuring the root HTML tag with id "site"
-const isSite = (): boolean => {
-    const siteElement = document.getElementById("site");
-    if (siteElement) {
-        return siteElement.tagName === "html" ? true : false;
-    }
-};
-
-export const setup = () => {
-    Init.init();
+const setupState = () => {
     return Init.state;
 };
+
+const setupAfterState = () => {
+    Init.init();
+};
+
+// Setup logic
+(window as any).state = setupState(); // HACK properly extend typings, come on
+setupAfterState();
 
 // export const setup = (): void => {
 //     if (isSite()) {
