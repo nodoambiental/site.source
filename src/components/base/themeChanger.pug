@@ -1,9 +1,13 @@
+!= Tdef(`set nav = load_data(path="data/config/nav.toml")`)
+
 mixin themeChanger 
     div(class="dropdown dropdown-left") 
         div(tabindex="0", class="group btn gap-2 normal-case btn-ghost")
             div(class="container h-4 w-4 flex-no-shrink fill-current")
                 include ../../static/icons/solid/color-swatch.svg
-            div(class="w-0 group-hover:w-auto hidden group-hover:md:inline") Themes
+            div(class="w-0 group-hover:w-auto hidden group-hover:md:inline")
+                span(class="zt-i18n")
+                    != T_unsafe("nav.theme_key")
         div(class="dropdown-content bg-base-200 text-base-content rounded-t-box rounded-b-box top-px h-96 w-52 overflow-y-auto shadow-2xl mt-16") 
             ul(tabindex="0", class="menu menu-compact p-4") 
                 li 

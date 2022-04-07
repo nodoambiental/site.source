@@ -1,36 +1,50 @@
 include base
+!= Tdef(`set nav = load_data(path="data/config/nav.toml")`)
 
 mixin navbar
     nav(class=CSS("nav"))
         div(class="flex-none")
             a(class=CSS("navButton") id="potato") POTATO
         div(class="flex-1")
-            +Tfor("config.extra.site_nav", "element")
+            +Tfor("nav.entries", "element")
                 +Tif("element.type == 'link'")
                     a(class=CSS("navButton"), href = T("element.path"))
-                        != T_unsafe("element.i18n_key")
+                        span(class="zt-i18n")
+                            != T_unsafe("element.text_key")
                 +Tif("element.type == 'dropdown'")
                     // TODO Add dropdown ::after in the class
                     // TODO Implement class navDropdown
-                    a(class=CSS("navButton"), href = T("element.path"))
-                        != T_unsafe("element.i18n_key")
+                    a(class=CSS("navDropdown"), href = T("element.path"))
+                        span(class="zt-i18n")
+                            != T_unsafe("element.text_key")
+                        span(style="max-width:1em;")
+                            include ../static/icons/solid/chevron-down.svg
                 +Tif("element.type == 'link_external'")
                     // TODO Add external icon ::after in the class
                     // TODO Implement class navButtonExternal
                     a(class=CSS("navButton"), href = T("element.path"))
-                        != T_unsafe("element.i18n_key")
+                        span(class="zt-i18n")
+                            != T_unsafe("element.text_key")
+                        span(style="max-width:1em;")
+                            include ../static/icons/solid/external-link.svg
         div(class="flex-none gap-2")
             +langSelector
             +themeChanger
             +search 
-            +avatarDropdown("./potato.png")
-                li
-                    a(class="justify-between") Potat 
-                        span(class="badge badge-success") Tasty!
-                li
-                    a(class="justify-between") Candy 
-                        span(class="badge badge-info") Sour!
-                li
-                    a(class="justify-between") Candy
-                        span(class="badge badge-error") Sad :(
+            +Tfor("nav.entries", "element")
+                +Tif("element.type == 'button'")
+                    // TODO Implement class navButtonHighlight
+                    a(class=CSS("navButtonPrimary"), href = T("element.path"))
+                        span(class="zt-i18n")
+                            != T_unsafe("element.text_key")
+            //- +avatarDropdown("./potato.png")
+            //-     li
+            //-         a(class="justify-between") Potat 
+            //-             span(class="badge badge-success") Tasty!
+            //-     li
+            //-         a(class="justify-between") Candy 
+            //-             span(class="badge badge-info") Sour!
+            //-     li
+            //-         a(class="justify-between") Candy
+            //-             span(class="badge badge-error") Sad :(
         
