@@ -1,6 +1,6 @@
 import * as ZT from "ziptied";
-import i18n_en from "../i18n/en.json";
-import i18n_es from "../i18n/es.json";
+import i18n_en from "../data/i18n/en.json";
+import i18n_es from "../data/i18n/es.json";
 
 type Langs = {
     [lang: string]: Record<string, string>;
