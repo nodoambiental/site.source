@@ -1,0 +1,142 @@
+theme_key = "nav_theme"
+
+[[entries]]
+text_key = "nav_services"
+path = "TODO"
+type = "link"
+
+[[entries]]
+text_key = "nav_projects"
+path = "TODO"
+type = "dropdown"
+
+[[entries.dropdown]]
+path = "TODO"
+
+[[entries.dropdown]]
+text_key = "nav_projects_orchards"
+path = "TODO"
+
+[[entries.dropdown]]
+text_key = "nav_projects_others"
+path = "TODO"
+
+[[entries]]
+text_key = "nav_about"
+path = "TODO"
+type = "dropdown"
+
+[[entries.dropdown]]
+text_key = "nav_about_ngo"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_about_team"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_about_values"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_about_goals"
+path = "TODO"
+type = "link"
+
+[[entries]]
+text_key = "nav_made-here"
+path = "TODO"
+type = "dropdown"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_products"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_research"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_documentation"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_fos"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_wiki"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_projects"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_made-here_working-here"
+path = "TODO"
+type = "link"
+
+[[entries]]
+text_key = "nav_more"
+path = "TODO"
+type = "dropdown"
+
+[[entries.dropdown]]
+text_key = "nav_more_contact"
+path = "TODO"
+type = "link_external"
+
+[[entries.dropdown]]
+text_key = "nav_more_enquiries"
+path = "TODO"
+type = "link_external"
+
+[[entries.dropdown]]
+text_key = "nav_more_blog"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_more_tech-blog"
+path = "TODO"
+type = "link"
+
+[[entries.dropdown]]
+text_key = "nav_more_github"
+path = "TODO"
+type = "link_external"
+
+[[entries.dropdown]]
+text_key = "nav_more_facebook"
+path = "TODO"
+type = "link_external"
+
+[[entries.dropdown]]
+text_key = "nav_more_linkedin"
+path = "TODO"
+type = "link_external"
+
+[[entries.dropdown]]
+text_key = "nav_more_instagram"
+path = "TODO"
+type = "link_external"
+
+[[entries]]
+text_key = "nav_join"
+path = "TODO"
+type = "button"
+
+[[entries]]
+text_key = "nav_donate"
+path = "TODO"
+type = "button"
