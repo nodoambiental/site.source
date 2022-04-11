@@ -20,19 +20,20 @@ export const state = {
             load: new ZT.Events.ActiveEvent<boolean>("load", (event) => true),
             mobile: new ZT.Events.WidthQuery(768),
         },
-        lang: new ZT.State("en"),
-        availableLangs: langs,
     },
     data: {},
     nodes: {
         potato: new ZT.Node("potato"),
     },
     components: {
-        i18n: new ZT.Component("i18n", (node, payload) => {
-            node.dataset.ztI18nKey = node.innerText;
-            return node;
-        }),
-        langSelector: new ZT.Component("langSelector"),
+        i18n: new ZT.TextReplacerTarget(
+            "i18n",
+            {
+                selected: "en",
+                corpus: langs,
+            },
+            "Updated internazionalization target."
+        ),
     },
 };
 
@@ -41,27 +42,17 @@ interface StatefulWindow extends Window {
 }
 
 export const init = (): void => {
+    Object.assign((window as unknown as StatefulWindow).state.components, {
+        langSelector: new ZT.TextReplacerSelector(
+            "langSelector",
+            "data-zt-i18n-lang",
+            "click",
+            state.components.i18n,
+            "Updated language."
+        ),
+    });
+
     state.UI.queries.mobile.subscribe("menu", {
         next: (matches) => state.UI.media.isMobile.update(matches),
     });
-
-    state.components.langSelector.onEventLocal("click", (node) => {
-        const lang = node.getAttribute("data-zt-i18n-lang");
-        if (lang) {
-            console.info(`updated lang to ${lang}`);
-            (window as unknown as StatefulWindow).state.UI.lang.update(lang);
-        }
-        return node;
-    });
-    state.components.i18n.addSideEffect(
-        "i18n_update",
-        (node: HTMLElement, lang: keyof typeof langs) => {
-            console.info("fired i18n_update effect");
-            node.innerText = (
-                window as unknown as StatefulWindow
-            ).state.UI.availableLangs[lang][node.dataset.ztI18nKey];
-            return node;
-        },
-        state.UI.lang
-    );
 };
