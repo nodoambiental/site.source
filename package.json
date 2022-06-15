@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc util/*.ts; webpack --mode=production --node-env=production; zola --root build/zola build",
-        "build:dev": "tsc util/*.ts; webpack --mode=development; zola --root build/zola build"
+        "build:dev": "webpack --mode=development; zola --root build/zola build"
     },
     "repository": {
         "type": "git",
@@ -52,8 +52,5 @@
         "typescript": "^4.5.5",
         "webpack": "^5.69.1",
         "webpack-cli": "^4.9.2"
-    },
-    "dependencies": {
-        "magnetic-js": "^0.1.2-hf1"
     }
 }
