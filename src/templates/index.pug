@@ -4,6 +4,7 @@ include ../util/classes
 
 // Components
 include ../components/navbar
+include ../components/hero
 include ../components/head
 include ../components/base
 
@@ -17,6 +18,7 @@ html(id="site", lang="en", data-theme="dark")
     body 
         header
             +navbar
+            +hero
         main
             +hr
             +Tblock("content")

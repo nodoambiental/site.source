@@ -1,0 +1,16 @@
+!= Tdef(`set hero = load_data(path="data/config/hero.toml")`)
+
+mixin hero
+    div(class=CSS("hero"))
+        div(class=CSS("heroText"))
+            div(class="max-w-md")
+                img(class="w-full h-auto mx-auto fill-primary-content", src="logos/logo_navigation.svg")
+                h1(class="mb-5 text-3xl font-bold")
+                    span(class="zt-i18n")
+                        != T_unsafe("hero.title_key")
+                p(class="mb-5")
+                    span(class="zt-i18n")
+                        != T_unsafe("hero.subtitle_key")
+
+
+// TODO: Add a zt-i18n component to handle images.
