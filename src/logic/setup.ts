@@ -1,4 +1,5 @@
 import * as Init from "./init";
+import "./types";
 
 const setupState = () => {
     return Init.state;
@@ -9,7 +10,7 @@ const setupAfterState = () => {
 };
 
 // Setup logic
-(window as any).state = setupState(); // HACK properly extend typings, come on
+window.state = setupState();
 setupAfterState();
 
 // export const setup = (): void => {
