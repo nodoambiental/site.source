@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc util/*.ts; webpack --mode=production --node-env=production; zola --root build/zola build",
-        "build:dev": "webpack --mode=development; zola --root build/zola build"
+        "build": "tsc util/*.ts; webpack --mode=production --node-env=production",
+        "build:dev": "webpack --mode=development",
+        "serve": "WATCH=true webpack --mode=development --watch"
     },
     "repository": {
         "type": "git",
@@ -40,6 +41,7 @@
         "postcss-loader": "^6.2.1",
         "prettier": "^2.5.1",
         "pug-loader": "^2.4.0",
+        "reload": "^3.2.0",
         "rxjs": "^7.5.4",
         "sass": "^1.49.8",
         "sass-loader": "^12.6.0",
