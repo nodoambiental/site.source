@@ -75,21 +75,21 @@ const config = {
                         reload.stderr.on("data", function (data) {
                             process.stderr.write(data);
                         });
-
-                        childProcess.exec(
-                            `cp "${path.resolve(
-                                __dirname,
-                                "build",
-                                "zola",
-                                "bundle.js"
-                            )}" "${path.resolve(
-                                __dirname,
-                                "build",
-                                "dist",
-                                "bundle.js"
-                            )}"`
-                        );
                     }
+
+                    childProcess.exec(
+                        `cp "${path.resolve(
+                            __dirname,
+                            "build",
+                            "zola",
+                            "bundle.js"
+                        )}" "${path.resolve(
+                            __dirname,
+                            "build",
+                            "dist",
+                            "bundle.js"
+                        )}"`
+                    );
                 });
             },
         },
