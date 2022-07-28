@@ -4,7 +4,6 @@
     "description": "Source for the sitebuilder to build the site.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc util/*.ts; webpack --mode=production --node-env=production",
         "build:dev": "webpack --mode=development",
         "serve": "WATCH=true webpack --mode=development --watch"
